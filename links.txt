@@ -1,0 +1,19 @@
+Foodiee  application
+1.https://pochamvijay.github.io/foodie-Application/
+sigh up
+2.https://pochamvijay.github.io/sighup/
+TravelYari
+3.https://pochamvijay.github.io/TravelYari/
+  
+
+bank application
+1.https://bank-assets--pochamvijay235.replit.app
+quiz application
+2.https://attached-assets--pochamvijay4.replit.app
+eccommerce application
+3.https://ecommers-assets--pochamvijaybabu.replit.app
+
+Capstones ui 
+============
+1.capstone
+https://vijaybabu1.pythonanywhere.com/

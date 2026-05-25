@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <title>Edit Student</title>
+
+    <style>
+
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+            font-family:Arial;
+        }
+
+        body{
+            background:#f2f2f2;
+            display:flex;
+            justify-content:center;
+            align-items:center;
+            height:100vh;
+        }
+
+        .box{
+            width:500px;
+            background:white;
+            padding:40px;
+            border-radius:10px;
+            box-shadow:0px 0px 10px gray;
+        }
+
+        h1{
+            margin-bottom:30px;
+            text-align:center;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="number"]{
+
+            width:100%;
+            padding:15px;
+            margin-top:20px;
+            border:1px solid gray;
+            border-radius:5px;
+            font-size:18px;
+
+        }
+
+        .gender{
+            margin-top:20px;
+            font-size:20px;
+        }
+
+        .gender input{
+            width:auto;
+            margin-top:20px;
+            margin-right:10px;
+        }
+
+        button{
+
+            width:100%;
+            padding:15px;
+            margin-top:30px;
+            background:blue;
+            color:white;
+            border:none;
+            border-radius:5px;
+            font-size:22px;
+            cursor:pointer;
+
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+<div class="box">
+
+    <h1>Edit Student</h1>
+
+    <form action="/update/{{d.id}}/" method="POST">
+
+        {% csrf_token %}
+
+        <input type="text" name="name" value="{{d.name}}">
+
+        <input type="email" name="email" value="{{d.email}}">
+
+        <input type="number" name="age" value="{{d.age}}">
+
+        <div class="gender">
+
+            <p>Select Gender</p>
+
+            <input type="radio" name="gender" value="male"
+            {% if d.gender == "male" %} checked {% endif %}>
+            Male
+
+            <input type="radio" name="gender" value="female"
+            {% if d.gender == "female" %} checked {% endif %}>
+            Female
+
+        </div>
+
+        <button type="submit">Update</button>
+
+    </form>
+
+</div>
+
+</body>
+</html>
